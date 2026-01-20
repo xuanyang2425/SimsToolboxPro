@@ -17,6 +17,19 @@ from pro.core.task_service import TaskService
 from pro.modules.registry import load_modules
 from pro.ui.log_dock import LogDock
 from pro.ui.task_dock import TaskDock
+from pathlib import Path
+
+from PySide6 import QtCore, QtGui, QtWidgets
+
+from ..core.event_bus import EventBus
+from ..core.file_index_service import FileIndexService, ScanSummary
+from ..core.log_service import LogService
+from ..core.op_log_service import OpLogService
+from ..core.settings_service import SettingsService
+from ..core.task_service import TaskService
+from ..modules.registry import load_modules
+from .log_dock import LogDock
+from .task_dock import TaskDock
 
 
 class MainWindow(QtWidgets.QMainWindow):
