@@ -1,5 +1,22 @@
 from __future__ import annotations
 
+import sys
+from pathlib import Path
+
+if __package__ is None:  # Allows running this file directly.
+    sys.path.append(str(Path(__file__).resolve().parents[2]))
+
+from PySide6 import QtCore, QtGui, QtWidgets
+
+from pro.core.event_bus import EventBus
+from pro.core.file_index_service import FileIndexService, ScanSummary
+from pro.core.log_service import LogService
+from pro.core.op_log_service import OpLogService
+from pro.core.settings_service import SettingsService
+from pro.core.task_service import TaskService
+from pro.modules.registry import load_modules
+from pro.ui.log_dock import LogDock
+from pro.ui.task_dock import TaskDock
 from pathlib import Path
 
 from PySide6 import QtCore, QtGui, QtWidgets
